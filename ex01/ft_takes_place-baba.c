@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 int		ft_format_hour(int hour)
 {
@@ -17,11 +17,32 @@ char	ft_am_or_pm(int hour)
 		return ('P');
 }
 
+void	ft_putnbr(int nbr)
+{
+	char decade;
+	char unite;
+
+	decade = nbr / 10 + '0';
+	unite = nbr % 10 + '0';
+	if (decade > '0')
+		write(1, &decade, 1);
+	write(1, &unite, 1);
+}
+
 void	ft_takes_place(int hour)
 {
-	printf("THE FOLLOWING TAKES PLACE BETWEEN %d.00 %c.M. AND %d.00 %c.M.\n",
-			ft_format_hour(hour),
-			ft_am_or_pm(hour),
-			ft_format_hour(hour + 1),
-			ft_am_or_pm(hour + 1));
+	char first_hour;
+	char second_hour;
+
+	first_hour = ft_am_or_pm(hour);
+	second_hour = ft_am_or_pm(hour + 1);
+	write(1, "THE FOLLOWING TAKES PLACE BETWEEN ", 34);
+	ft_putnbr(ft_format_hour(hour));
+	write(1, ".00 ", 4);
+	write(1, &first_hour, 1);
+	write(1, ".M. AND ", 8);
+	ft_putnbr(ft_format_hour(hour + 1));
+	write(1, ".00 ", 4);
+	write(1, &second_hour, 1);
+	write(1, ".M.\n", 4);
 }
