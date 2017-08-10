@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 int		ft_antidote(int i, int j, int k);
 
