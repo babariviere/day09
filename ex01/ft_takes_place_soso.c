@@ -1,3 +1,6 @@
+
+#include <stdio.h>
+
 void	ft_takes_place(int hour)
 {
 	if (hour == 12)
