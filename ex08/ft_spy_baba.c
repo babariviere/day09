@@ -61,7 +61,8 @@ int		main(int argc, char **argv)
 		return (0);
 	while (idx < argc)
 	{
-		if (ft_find_str(argv[idx], "president") || ft_find_str(argv[idx], "attack") ||
+		if (ft_find_str(argv[idx], "president") ||
+				ft_find_str(argv[idx], "attack") ||
 				ft_find_str(argv[idx], "powers"))
 		{
 			ft_putstr("Alert!!!\n");
