@@ -5,9 +5,9 @@ void	ft_testing(int i, int j, int k, int result)
 {
 	printf("Testing i=%d, j=%d, k=%d: ", i, j, k);
 	if (ft_antidote(i, j, k) != result)
-		printf("[ERROR] result should be: %d", result);
+		printf("[ERROR] result should be: %d\n", result);
 	else
-		printf("[OK]");
+		printf("[OK]\n");
 }
 
 int main()
