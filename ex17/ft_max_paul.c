@@ -5,7 +5,7 @@ int		ft_max(int *tab, int length)
 
 	m = 0;
 	i = 0;
-	if (length <= 0);
+	if (length <= 0)
 		return (0);
 	while (i < length)
 	{
