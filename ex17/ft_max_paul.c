@@ -11,5 +11,5 @@ int		ft_max(int *tab, int length)
 			m = i;
 		i++;
 	}
-	return (str[m]);
+	return (tab[m]);
 }
