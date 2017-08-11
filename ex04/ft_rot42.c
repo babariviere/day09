@@ -5,7 +5,10 @@ char *ft_rot42(char *str)
 	i = 0;
 	while (str[i])
 	{
-		str[i] = (str[i] - 'a' + 42) % 26 + 'a';
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] = (str[i] - 'A' + 42) % 26 + 'A';
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] = (str[i] - 'a' + 42) % 26 + 'a';
 		i++;
 	}
 	return (str);
@@ -13,7 +16,7 @@ char *ft_rot42(char *str)
 
 int main (void)
 {
-	char str[]="bonjour";
+	char str[]="Bonjour";
 	printf("%s", ft_rot42(str));
 	return (0);
 }
