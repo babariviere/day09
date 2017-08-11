@@ -13,10 +13,3 @@ char *ft_rot42(char *str)
 	}
 	return (str);
 }
-
-int main (void)
-{
-	char str[]="Bonjour";
-	printf("%s", ft_rot42(str));
-	return (0);
-}
