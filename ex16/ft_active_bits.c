@@ -6,7 +6,7 @@ unsigned int	ft_active_bits(int value)
 
 	idx = 0;
 	count = 0;
-	while (idx < 32)
+	while (value)
 	{
 		if (value & 1)
 			count++;
