@@ -8,8 +8,7 @@ unsigned int	ft_active_bits(int value)
 	count = 0;
 	while (value)
 	{
-		if (value & 1)
-			count++;
+		count += value & 1;
 		idx++;
 		value = value >> 1;
 	}
