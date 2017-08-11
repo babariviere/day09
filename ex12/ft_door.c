@@ -2,7 +2,9 @@
 
 void	ft_putstr(char *str)
 {
-	int i = 0;
+	int i;
+
+	i = 0;
 	while (str[i])
 		write(1, &str[i++], 1);
 }
@@ -19,14 +21,14 @@ void	close_door(t_door *door)
 	door->state = CLOSE;
 }
 
-ft_bool	is_door_open(t_door *door)
+t_bool	is_door_open(t_door *door)
 {
 	ft_putstr("Door is open ?\n");
 	return (door->state == OPEN);
 }
 
-ft_bool is_door_close(t_door *door)
+t_bool	is_door_close(t_door *door)
 {
-	ft_putstr("Door is close ?\n") ;
+	ft_putstr("Door is close ?\n");
 	return (door->state == CLOSE);
 }

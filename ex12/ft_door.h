@@ -13,11 +13,11 @@ typedef struct	s_door
 	int state;
 }				t_door;
 
-typedef int		ft_bool;
+typedef int		t_bool;
 
 void			open_door(t_door *door);
 void			close_door(t_door *door);
-ft_bool			is_door_open(t_door *door);
-ft_bool			is_door_close(t_door *door);
+t_bool			is_door_open(t_door *door);
+t_bool			is_door_close(t_door *door);
 
 #endif

@@ -1,9 +1,11 @@
 #include <stdlib.h>
 
-int		ft_strlen(char *str) {
+int		ft_strlen(char *str)
+{
 	int len;
 
-	len = 0; while (str[len])
+	len = 0;
+	while (str[len])
 		len++;
 	return (len);
 }
@@ -29,7 +31,7 @@ void	ft_strcat(char *dest, char *src)
 {
 	int didx;
 	int sidx;
-	
+
 	if (src[0] == 0)
 		return ;
 	didx = ft_strlen(dest);
